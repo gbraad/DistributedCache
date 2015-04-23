@@ -7,8 +7,7 @@ namespace CacheSpikeCLI
     {
         static void Main(string[] args)
         {
-
-            var cacheHelper = new SessionCacheHelper();
+            var cacheHelper = new RedisCacheHelper();
 
             for (var i = 0; i < 1000; i++)
             {

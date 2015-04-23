@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CacheSpike
+namespace CacheSpike.Model
 {
     [Serializable]
     public class Session
@@ -11,6 +11,6 @@ namespace CacheSpike
             set { id = value; }
         }
 
-        private string id = "";
+        private string id;
     }
 }

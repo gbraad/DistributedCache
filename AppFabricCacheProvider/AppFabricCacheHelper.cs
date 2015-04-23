@@ -1,8 +1,9 @@
 ﻿using System;
+using CacheSpike.Model;
 
 namespace CacheSpike
 {
-    public class SessionCacheHelper
+    public class AppFabricCacheHelper
     {
 
         public bool Add(string sessionId)
@@ -12,7 +13,7 @@ namespace CacheSpike
                 Session session = new Session();
                 session.Id = sessionId;
 
-                CacheProvider.Cache.Add(sessionId, session, new TimeSpan(0, 0, 2, 0));
+                AppFabricCacheProvider.Cache.Add(sessionId, session, new TimeSpan(0, 0, 2, 0));
                 return true;
             }
             catch (Exception ex)
@@ -26,7 +27,7 @@ namespace CacheSpike
         {
             try
             {
-                return (Session)CacheProvider.Cache.Get(sessionId);
+                return (Session)AppFabricCacheProvider.Cache.Get(sessionId);
             }
             catch (Exception ex)
             {

@@ -1,16 +1,9 @@
-AppFabric Cache example
+C# .NET Caching example
 =======================
 
 
-Small test of using AppFabric to store serialized objects
+Small test of using AppFabric or Redis to store serialized objects
 
-Make sure a local cache instance is available.
-```powershell
-  Import-Module DistributedCacheAdministration
-  Use-CacheCluster
-  Remove-Cache -CacheName session
-  New-Cache -CacheName session -Eviction None
-```
 
 After this you can run
 ```powershell
