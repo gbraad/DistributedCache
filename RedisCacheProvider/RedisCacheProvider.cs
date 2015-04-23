@@ -7,7 +7,7 @@ namespace CacheSpike
 {
     public class RedisCacheProvider
     {
-        private static RedisClient cacheClient = null;
+        private static RedisClient cacheClient;
 
         private static readonly string REDIS_SERVER_HOSTNAME =
             ConfigurationManager.AppSettings["REDIS_SERVER_HOSTNAME"];

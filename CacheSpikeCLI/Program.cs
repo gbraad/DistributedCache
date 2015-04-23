@@ -1,5 +1,6 @@
 ﻿using System;
 using CacheSpike;
+using CacheSpike.Model;
 
 namespace CacheSpikeCLI
 {
@@ -7,11 +8,11 @@ namespace CacheSpikeCLI
     {
         static void Main(string[] args)
         {
-            var cacheHelper = new RedisCacheHelper();
+            var cacheHelper = new AppFabricCacheHelper<Session>();
 
             for (var i = 0; i < 1000; i++)
             {
-                cacheHelper.Add(i.ToString());
+                cacheHelper.Set(i.ToString(), new Session { Id = i.ToString()});
                 Console.WriteLine("Put: " + i);
             }
 

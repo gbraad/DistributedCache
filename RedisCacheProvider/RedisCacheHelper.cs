@@ -1,46 +1,28 @@
 ﻿using System;
 using System.Configuration;
-using CacheSpike.Model;
 
 namespace CacheSpike
 {
-    public class RedisCacheHelper
+    public class RedisCacheHelper<T> : ICache<T>
     {
         private static readonly string REDIS_CACHENAME = ConfigurationManager.AppSettings["REDIS_CACHENAME"];
 
-
-        public bool Add(string sessionId)
+        public string IdToUrn(string id)
         {
-            try
-            {
-               var list = RedisCacheProvider.Cache.As<Session>();
-
-                Session session = new Session();
-                session.Id = sessionId;
-
-                var urn = String.Format("urn:{0}:{1}", REDIS_CACHENAME, sessionId);
-                list.SetEntry(urn, session, new TimeSpan(0, 0, 2, 0));
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-
+            return String.Format("urn:{0}:{1}", REDIS_CACHENAME, id);
         }
 
-        public Session Get(string sessionId)
+        public void Set(string key, T value)
         {
-            try
-            {
-                var urn = String.Format("urn:{0}:{1}", REDIS_CACHENAME, sessionId);
-                var list = RedisCacheProvider.Cache.As<Session>();
-                return list.GetValue(urn);
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            var list = RedisCacheProvider.Cache.As<T>();
+
+            list.SetEntry(key, value, new TimeSpan(0, 0, 2, 0));
+        }
+
+        public T Get(string key)
+        {
+            var list = RedisCacheProvider.Cache.As<T>();
+            return list.GetValue(key);
         }
     }
 }

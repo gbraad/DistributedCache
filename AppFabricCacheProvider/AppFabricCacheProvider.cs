@@ -7,8 +7,8 @@ namespace CacheSpike
 {
     public class AppFabricCacheProvider
     {
-        private static DataCacheFactory dataCacheFactory = null;
-        private static DataCache dataCache = null;
+        private static DataCacheFactory dataCacheFactory;
+        private static DataCache dataCache;
 
         private static readonly string APPFABRIC_SERVER_HOSTNAME =
             ConfigurationManager.AppSettings["APPFABRIC_SERVER_HOSTNAME"];
@@ -16,7 +16,7 @@ namespace CacheSpike
         private static readonly int APPFABRIC_SERVER_PORT =
             Int32.Parse(ConfigurationManager.AppSettings["APPFABRIC_SERVER_PORT"]);
 
-        private static readonly string APPFABRIC_CACHENAME = ConfigurationManager.AppSettings["APPFABRIC_NAME"];
+        private static readonly string APPFABRIC_CACHENAME = ConfigurationManager.AppSettings["APPFABRIC_CACHENAME"];
 
         public static DataCache Cache
         {

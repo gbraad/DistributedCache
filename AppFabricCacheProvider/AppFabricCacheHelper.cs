@@ -1,38 +1,18 @@
 ﻿using System;
-using CacheSpike.Model;
 
 namespace CacheSpike
 {
-    public class AppFabricCacheHelper
+    public class AppFabricCacheHelper<T> : ICache<T>
     {
 
-        public bool Add(string sessionId)
+        public void Set(string key, T value)
         {
-            try
-            {
-                Session session = new Session();
-                session.Id = sessionId;
-
-                AppFabricCacheProvider.Cache.Add(sessionId, session, new TimeSpan(0, 0, 2, 0));
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-
+            AppFabricCacheProvider.Cache.Add(key, value, new TimeSpan(0, 0, 2, 0));
         }
 
-        public Session Get(string sessionId)
+        public T Get(string key)
         {
-            try
-            {
-                return (Session)AppFabricCacheProvider.Cache.Get(sessionId);
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            return (T)AppFabricCacheProvider.Cache.Get(key);
         }
     }
 }
