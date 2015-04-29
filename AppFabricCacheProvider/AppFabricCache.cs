@@ -4,7 +4,7 @@ using DistributedCache.Providers;
 
 namespace DistributedCache
 {
-    public class AppFabricCacheHelper<T> : ICache<T>
+    public class AppFabricCache<T> : ICache<T>
     {
 
         public void Set(string key, T value)

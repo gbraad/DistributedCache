@@ -3,9 +3,9 @@ using Microsoft.ApplicationServer.Caching;
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace DisitributedCache.Providers
+namespace DistributedCache.Providers
 {
-    public class AppFabricCacheProvider
+    internal class AppFabricCacheProvider
     {
         private static DataCacheFactory dataCacheFactory;
         private static DataCache dataCache;

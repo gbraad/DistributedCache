@@ -4,7 +4,7 @@ using DistributedCache.Providers;
 
 namespace DistributedCache
 {
-    public class RedisCacheHelper<T> : ICache<T>
+    public class RedisCache<T> : ICache<T>
     {
         private static readonly string REDIS_CACHENAME = ConfigurationManager.AppSettings["REDIS_CACHENAME"];
 

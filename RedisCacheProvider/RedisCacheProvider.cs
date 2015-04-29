@@ -5,7 +5,7 @@ using ServiceStack.Redis;
 
 namespace DistributedCache.Providers
 {
-    public class RedisCacheProvider
+    internal class RedisCacheProvider
     {
         private static RedisClient cacheClient;
 

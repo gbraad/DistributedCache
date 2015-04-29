@@ -10,8 +10,3 @@ Grant-CacheAllowedClientAccount -Account "[domain]\[username]"
 
 Start-CacheCluster
 ```
-
-Grant access to the cache cluster
-```powershell
-Grant-CacheAllowedClientAccount -Account "[domain]\[username]"
-```

@@ -8,7 +8,7 @@ namespace DistributedCache
     {
         static void Main(string[] args)
         {
-            var cacheHelper = new AppFabricCacheHelper<Session>();
+            var cacheHelper = new AppFabricCache<Session>();
 
             for (var i = 0; i < 1000; i++)
             {
