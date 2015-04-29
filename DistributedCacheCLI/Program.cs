@@ -1,8 +1,8 @@
 ﻿using System;
-using CacheSpike;
-using CacheSpike.Model;
+using DistributedCache;
+using DistributedCache.Shared;
 
-namespace CacheSpikeCLI
+namespace DistributedCache
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace CacheSpikeCLI
 
             for (var i = 0; i < 1000; i++)
             {
-                cacheHelper.Set(i.ToString(), new Session { Id = i.ToString()});
+                cacheHelper.Set(i.ToString(), new Session { Id = i.ToString()}, new TimeSpan(0, 0, 2, 0));
                 Console.WriteLine("Put: " + i);
             }
 
@@ -21,6 +21,7 @@ namespace CacheSpikeCLI
                 Console.WriteLine("Get: " + cacheHelper.Get(i.ToString()).Id);
             }
 
+	    Console.WriteLine("Press Play On Tape to close.");
             Console.ReadKey();
         }
     }

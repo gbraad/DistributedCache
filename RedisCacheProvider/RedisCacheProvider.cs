@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using ServiceStack.Redis;
 
-namespace CacheSpike
+namespace DistributedCache.Providers
 {
     public class RedisCacheProvider
     {

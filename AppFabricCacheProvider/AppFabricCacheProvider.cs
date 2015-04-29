@@ -3,7 +3,7 @@ using Microsoft.ApplicationServer.Caching;
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace CacheSpike
+namespace DisitributedCache.Providers
 {
     public class AppFabricCacheProvider
     {

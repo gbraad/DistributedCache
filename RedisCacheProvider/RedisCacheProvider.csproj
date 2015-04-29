@@ -7,7 +7,7 @@
     <ProjectGuid>{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RedisCacheProvider</RootNamespace>
+    <RootNamespace>DistirbutedCache</RootNamespace>
     <AssemblyName>RedisCacheProvider</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -53,12 +53,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CacheSpike.Model\CacheSpikeShared.csproj">
-      <Project>{943a3722-20f4-4fe2-9a26-e8b75a3e0a36}</Project>
-      <Name>CacheSpikeShared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

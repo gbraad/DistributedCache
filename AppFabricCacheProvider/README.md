@@ -4,6 +4,11 @@ Import-Module DistributedCacheAdministration
 Use-CacheCluster
 Remove-Cache -CacheName session
 New-Cache -CacheName session -Eviction None
+
+Get-CacheAllowedClientAccounts
+Grant-CacheAllowedClientAccount -Account "[domain]\[username]"
+
+Start-CacheCluster
 ```
 
 Grant access to the cache cluster

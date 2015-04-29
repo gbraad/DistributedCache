@@ -1,11 +1,12 @@
 ﻿using System;
 
-namespace CacheSpike
+namespace DistributedCache
 {
     public interface ICache<T>
     {
         T Get(string key);
         void Set(string key, T obj);
-        //void Remove(string key);
+        void Set(string key, T obj, TimeSpan expirationTimeSpan);
+        void Remove(string key);
     }
 }

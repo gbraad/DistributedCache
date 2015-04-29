@@ -1,5 +1,5 @@
-C# .NET Caching example
-=======================
+C# .NET Distributed Caching example
+===================================
 
 
 Small test of using AppFabric or Redis to store serialized objects
@@ -7,7 +7,7 @@ Small test of using AppFabric or Redis to store serialized objects
 
 After this you can run
 ```powershell
-  CacheSpikeCLI.exe
+  DistributedCacheCLI.exe
 ```
 
 This will:

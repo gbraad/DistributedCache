@@ -1,15 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFabricCacheProvider", "AppFabricCacheProvider\AppFabricCacheProvider.csproj", "{40F9AA27-390F-4EC5-A06A-A5B4B356B333}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheSpikeCLI", "CacheSpikeCLI\CacheSpikeCLI.csproj", "{480BFCEB-7FE5-41BA-874A-84090A47079B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisCacheProvider", "RedisCacheProvider\RedisCacheProvider.csproj", "{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CacheSpikeShared", "CacheSpike.Model\CacheSpikeShared.csproj", "{943A3722-20F4-4FE2-9A26-E8B75A3E0A36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedCacheCLI", "DistributedCacheCLI\DistributedCacheCLI.csproj", "{480BFCEB-7FE5-41BA-874A-84090A47079B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedCacheShared", "DistributedCacheShared\DistributedCacheShared.csproj", "{943A3722-20F4-4FE2-9A26-E8B75A3E0A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +19,14 @@ Global
 		{40F9AA27-390F-4EC5-A06A-A5B4B356B333}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40F9AA27-390F-4EC5-A06A-A5B4B356B333}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40F9AA27-390F-4EC5-A06A-A5B4B356B333}.Release|Any CPU.Build.0 = Release|Any CPU
-		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{480BFCEB-7FE5-41BA-874A-84090A47079B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{943A3722-20F4-4FE2-9A26-E8B75A3E0A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{943A3722-20F4-4FE2-9A26-E8B75A3E0A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{943A3722-20F4-4FE2-9A26-E8B75A3E0A36}.Release|Any CPU.ActiveCfg = Release|Any CPU

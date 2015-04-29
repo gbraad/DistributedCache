@@ -7,8 +7,8 @@
     <ProjectGuid>{480BFCEB-7FE5-41BA-874A-84090A47079B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CacheSpikeCLI</RootNamespace>
-    <AssemblyName>CacheSpikeCLI</AssemblyName>
+    <RootNamespace>DistributedCache</RootNamespace>
+    <AssemblyName>DistributedCacheCLI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,9 +47,9 @@
       <Project>{40f9aa27-390f-4ec5-a06a-a5b4b356b333}</Project>
       <Name>AppFabricCacheProvider</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CacheSpike.Model\CacheSpikeShared.csproj">
+    <ProjectReference Include="..\DistributedCacheShared\DistributedCacheShared.csproj">
       <Project>{943a3722-20f4-4fe2-9a26-e8b75a3e0a36}</Project>
-      <Name>CacheSpikeShared</Name>
+      <Name>DistributedCacheShared</Name>
     </ProjectReference>
     <ProjectReference Include="..\RedisCacheProvider\RedisCacheProvider.csproj">
       <Project>{b434cd57-9e3b-4544-a451-f52ee6d9afe8}</Project>

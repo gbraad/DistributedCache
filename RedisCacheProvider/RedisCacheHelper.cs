@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Configuration;
+using DistributedCache.Providers;
 
-namespace CacheSpike
+namespace DistributedCache
 {
     public class RedisCacheHelper<T> : ICache<T>
     {
@@ -16,7 +17,19 @@ namespace CacheSpike
         {
             var list = RedisCacheProvider.Cache.As<T>();
 
-            list.SetEntry(key, value, new TimeSpan(0, 0, 2, 0));
+            list.SetEntry(key, value);
+        }
+
+        public void Set(string key, T value, TimeSpan expirationTimeSpan)
+        {
+            var list = RedisCacheProvider.Cache.As<T>();
+
+            list.SetEntry(key, value, expirationTimeSpan);
+        }
+
+        public void Remove(string key)
+        {
+            throw new NotImplementedException();
         }
 
         public T Get(string key)
