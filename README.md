@@ -1,5 +1,5 @@
-C# .NET Distributed Caching example
-===================================
+C# .NET Distributed Caching client
+==================================
 
 
 Small test of using AppFabric or Redis to store serialized objects
