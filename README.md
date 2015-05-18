@@ -37,6 +37,17 @@ cacheHelper.Set("key", "value", new TimeSpan(0, 0, 2, 0));
 var cachedstring = cacheHelper.Get("key");
 ```
 
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="APPFABRIC_SERVER_HOSTNAME" value="localhost"/>
+    <add key="APPFABRIC_SERVER_PORT" value="22233"/>
+    <add key="APPFABRIC_CACHENAME" value="session"/>
+  </appSettings>
+</configuration>
+```
+
 
 Authors
 -------
