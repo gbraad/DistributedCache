@@ -43,16 +43,13 @@
     <Reference Include="Microsoft.ApplicationServer.Caching.Core">
       <HintPath>..\packages\ServerAppFabric.Client.1.1.2106.32\lib\net35\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.DistributedCache">
-      <HintPath>..\packages\Microsoft.Web.DistributedCache.1.0.0\lib\Microsoft.Web.DistributedCache.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppFabricCache.cs" />
     <Compile Include="AppFabricCacheProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AppFabricCacheHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

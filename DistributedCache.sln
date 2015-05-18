@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppFabricCacheProvider", "AppFabricCacheProvider\AppFabricCacheProvider.csproj", "{40F9AA27-390F-4EC5-A06A-A5B4B356B333}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisCacheProvider", "RedisCacheProvider\RedisCacheProvider.csproj", "{B434CD57-9E3B-4544-A451-F52EE6D9AFE8}"

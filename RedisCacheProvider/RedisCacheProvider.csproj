@@ -49,10 +49,16 @@
   <ItemGroup>
     <Compile Include="RedisCacheProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RedisCacheHelper.cs" />
+    <Compile Include="RedisCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DistributedCacheShared\DistributedCacheShared.csproj">
+      <Project>{943a3722-20f4-4fe2-9a26-e8b75a3e0a36}</Project>
+      <Name>DistributedCacheShared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
