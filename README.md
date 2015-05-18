@@ -16,6 +16,28 @@ This will:
   * After two minutes the objects will have expired.
 
 
+Installation
+------------
+
+To install this simple DistributedCache client, run the following command in the Package Manager Console
+```powershell
+Install-Package DistributedCache.Shared
+Install-Package DistributedCache.AppFabric
+```
+
+
+Usage
+-----
+
+```cs
+using DistributedCache;
+
+var cacheHelper = new AppFabricCache<string>();
+cacheHelper.Set("key", "value", new TimeSpan(0, 0, 2, 0));
+var cachedstring = cacheHelper.Get("key");
+```
+
+
 Authors
 -------
 
