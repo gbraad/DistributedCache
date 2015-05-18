@@ -43,7 +43,7 @@ var cachedstring = cacheHelper.Get("key");
   <appSettings>
     <add key="APPFABRIC_SERVER_HOSTNAME" value="localhost"/>
     <add key="APPFABRIC_SERVER_PORT" value="22233"/>
-    <add key="APPFABRIC_CACHENAME" value="session"/>
+    <add key="APPFABRIC_CACHENAME" value="[cachename]"/>
   </appSettings>
 </configuration>
 ```
