@@ -47,6 +47,10 @@
       <Project>{40f9aa27-390f-4ec5-a06a-a5b4b356b333}</Project>
       <Name>AppFabricCacheProvider</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AspNetCacheProvider\AspNetCacheProvider.csproj">
+      <Project>{728d834e-0349-4ea3-bee8-5cda3eb0ee27}</Project>
+      <Name>AspNetCacheProvider</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DistributedCacheShared\DistributedCacheShared.csproj">
       <Project>{943a3722-20f4-4fe2-9a26-e8b75a3e0a36}</Project>
       <Name>DistributedCacheShared</Name>
