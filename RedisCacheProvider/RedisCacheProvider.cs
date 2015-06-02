@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using ServiceStack.Redis;
+using StackExchange.Redis;
 
 namespace DistributedCache.Providers
 {
     internal class RedisCacheProvider
     {
-        private static RedisClient cacheClient;
+        private static ConnectionMultiplexer connection;
+        private static IDatabase database;
 
         private static readonly string REDIS_SERVER_HOSTNAME =
             ConfigurationManager.AppSettings["REDIS_SERVER_HOSTNAME"];
@@ -15,25 +15,25 @@ namespace DistributedCache.Providers
         private static readonly int REDIS_SERVER_PORT =
             Int32.Parse(ConfigurationManager.AppSettings["REDIS_SERVER_PORT"]);
 
-        private static readonly string REDIS_SERVER_PASSWORD = ConfigurationManager.AppSettings["REDIS_SERVER_PASSWORD"];
 
-        public static RedisClient Cache
+        public static IDatabase Cache
         {
             get { return GetCache(); }
         }
 
-        private static RedisClient GetCache()
+        private static IDatabase GetCache()
         {
-            if (cacheClient != null)
-                return cacheClient;
+            if (database != null)
+                return database;
+
+            connection = ConnectionMultiplexer.Connect(string.Format("{0}:{1}", REDIS_SERVER_HOSTNAME, REDIS_SERVER_PORT));
 
             Console.WriteLine(REDIS_SERVER_HOSTNAME);
             Console.WriteLine(REDIS_SERVER_PORT);
 
-            cacheClient = new RedisClient(REDIS_SERVER_HOSTNAME, REDIS_SERVER_PORT);
-            //, REDIS_SERVER_PASSWORD);
+            database = connection.GetDatabase();
 
-            return cacheClient;
+            return database;
         }
     }
 }

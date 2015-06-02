@@ -7,7 +7,7 @@ namespace DistributedCache
     {
         static void Main(string[] args)
         {
-            var cacheHelper = new AppFabricCache<string>();
+            var cacheHelper = new RedisCache<string>();
 
             for (var i = 0; i < 1000; i++)
             {
@@ -20,7 +20,7 @@ namespace DistributedCache
                 Console.WriteLine("Get: " + cacheHelper.Get(i.ToString()));
             }
 
-	    Console.WriteLine("Press Play On Tape to close.");
+	        Console.WriteLine("Press Play On Tape to close.");
             Console.ReadKey();
         }
     }

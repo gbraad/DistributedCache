@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using DistributedCache.Providers;
+using Newtonsoft.Json;
 
 namespace DistributedCache
 {
@@ -15,27 +16,22 @@ namespace DistributedCache
 
         public void Set(string key, T value)
         {
-            var list = RedisCacheProvider.Cache.As<T>();
-
-            list.SetEntry(key, value);
+            RedisCacheProvider.Cache.StringSet(key, JsonConvert.SerializeObject(value));
         }
 
         public void Set(string key, T value, TimeSpan expirationTimeSpan)
         {
-            var list = RedisCacheProvider.Cache.As<T>();
-
-            list.SetEntry(key, value, expirationTimeSpan);
+            RedisCacheProvider.Cache.StringSet(key, JsonConvert.SerializeObject(value), expirationTimeSpan);
         }
 
         public void Remove(string key)
         {
-            throw new NotImplementedException();
+            RedisCacheProvider.Cache.KeyDelete(key);
         }
 
         public T Get(string key)
         {
-            var list = RedisCacheProvider.Cache.As<T>();
-            return list.GetValue(key);
+            return JsonConvert.DeserializeObject<T>(RedisCacheProvider.Cache.StringGet(key));
         }
     }
 }
